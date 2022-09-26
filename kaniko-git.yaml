@@ -8,8 +8,8 @@ spec:
   containers:
   - name: kaniko
     image: gcr.io/kaniko-project/executor:debug
-    args: ["--context=git://github.com/jeromecsv/kaniko-demo",
-            "--destination=froztfire/devops-toolkit:1.0.0"]
+    args: ["--context=git://github.com/jeromecsv/microservice-configserver",
+            "--destination=froztfire/configserver:1.0.0"]
     volumeMounts:
       - name: kaniko-secret
         mountPath: /kaniko/.docker
